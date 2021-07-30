@@ -1,6 +1,6 @@
 #Author: Marie-Odile P. Fortier (mfortier2@ucmerced.edu)
-#Date: developed on 7/25/2014, revised 9/25/2014, revised 2/28/2016, revised 10/15/2020 to Python 3 version (this code)
-#Python code to run a baseline life cycle assessment (LCA) scenario analysis, for one impact category at a time.
+#Date: developed on 7/25/2014, revised 9/25/2014, revised 2/28/2016, revised 10/15/2020 to Python 3 version, revised comments on 7/30/2021 for GitHub distribution (this code)
+#Python 3 code to run a baseline life cycle assessment (LCA) scenario analysis, for one impact category at a time.
 #Licensed under GNU General Public License v3.0: "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights." 
 
 #Information on setup and use of this code:
