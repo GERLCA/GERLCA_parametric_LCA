@@ -1,25 +1,28 @@
 #Author: Marie-Odile P. Fortier (mfortier2@ucmerced.edu)
-#Date: 7/25/2014, revised 9/25/2014, revised 2/28/2016, revised 10/15/2020 to Python 3 version (this code)
-#Python code to run a baseline LCA scenario analysis
+#Date: developed on 7/25/2014, revised 9/25/2014, revised 2/28/2016, revised 10/15/2020 to Python 3 version (this code)
+#Python code to run a baseline life cycle assessment (LCA) scenario analysis, for one impact category at a time.
+#Licensed under GNU General Public License v3.0: "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights." 
+
+#Information on setup and use of this code:
 #Works for a comma-delimited text file of parameter inputs and ranges
 #Make sure that exponents are ** and not ^.
 #Make sure that no dashes appear in variable names, only letters, numbers, and underscores.
 #Make sure that your parameter text file has no empty lines (including at the very end of the file).
 #IMPORTANT: Label process impact calculations with a variable that begins with "Process_" for the program to recognize it as a process impact scaled to your functional unit.
-#In accordance with the Creative Commons license type CC BY-NC-SA (Attribution-NonCommercial-ShareAlike), please cite this script as "GERLCA_scenario_analysis" version 1. 
 
 from math import *
 import os
 
-print('This program will run a baseline scenario analysis for a given LCA model based on baseline parameter values.')
+print('This program will run a baseline scenario analysis for a given life cycle assessment (LCA) model based on baseline parameter values, for one impact category at a time. The results will be provided by process along the life cycle, as well as the total for that impact category.')
 print('This program works for a comma-delimited text file of LCA parameter ranges with headers and with the following columns in order: input parameter name, minimum value, baseline value, and maximum value.')
 print('IMPORTANT: Label process impact calculations with a variable that begins with "Process_" for the program to recognize it as a process impact scaled to your functional unit.')
-workingdirectory=input('Enter the file path to your working folder:')
+print('')
+workingdirectory=input('Enter the file path to your working folder, where your parameter text file can be found:')
 
 os.chdir(workingdirectory)
 
-LCA_Parameter_ranges=input('Enter the name of your parameter range file:')
-LCA_Baseline_Case_results=input('Enter a text file name for your LCA baseline case results:')
+LCA_Parameter_ranges=input('Enter the name of your parameter text file (with .txt at the end):')
+LCA_Baseline_Case_results=input('Enter a text file name for your LCA baseline case results (with .txt at the end):')
 
 LCA_parameter_ranges=open(LCA_Parameter_ranges,'r')
 LCA_parameter_ranges=LCA_parameter_ranges.readlines()
