@@ -1,9 +1,14 @@
-#Author: Marie-Odile Fortier
-#Date: Revised from original July 2014 code on 10/16/14, 10/22/2014, 3/27/2016, 3/29/2016, and 10/15/2020.
-#Sensitivity analysis in Python for life cycle assessment (LCA)
+#Author: Marie-Odile P. Fortier (mfortier2@ucmerced.edu)
+#Date: Revised from original July 2014 code on 10/16/14, 10/22/2014, 3/27/2016, 3/29/2016, revised to Python 3 version on 10/15/2020, and revised comments on 12/31/2021 for GitHub distribution (this code).
+#Python 3 code to run a sensitivity analysis for a life cycle assessment (LCA) model, for one impact category.
+#Licensed under GNU General Public License v3.0: "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights." 
+
+#Information on setup and use of this code:
 #Works for a comma-delimited text file of parameter inputs and ranges
 #Make sure that exponents are ** and not ^.
 #Make sure that no dashes appear in variable names, only letters, numbers, and underscores.
+#Make sure that your parameter text file has no empty lines (including at the very end of the file).
+#IMPORTANT: Label process impact calculations with a variable that begins with "Process_" for the program to recognize it as a process impact scaled to your functional unit.
 
 from math import *
 from collections import OrderedDict
@@ -11,12 +16,14 @@ import os
 
 print('This program will produce a sensitivity analysis for a life cycle assessment by analyzing new results as each parameter is changed to its minimum or maximum value, one at a time.')
 print('This program works for a comma-delimited text file of LCA parameter ranges with headers and with the following columns in order: input parameter name, minimum value, baseline value, and maximum value.')
-workingdirectory=input('Enter the file path to your working folder:')
+print('IMPORTANT: Label process impact calculations with a variable that begins with "Process_" for the program to recognize it as a process impact scaled to your functional unit.')
+print('')
+workingdirectory=input('Enter the file path to your working folder, where your parameter text file can be found:')
 
 os.chdir(workingdirectory)
 
-LCA_Parameter_ranges=input('Enter the name of your parameter range file:')
-LCA_sensitivity_results=input('Enter a text file name for your sensitivity analysis results:')
+LCA_Parameter_ranges=input('Enter the name of your parameter range file (with .txt at the end):')
+LCA_sensitivity_results=input('Enter a text file name for your sensitivity analysis results (with .txt at the end):')
 
 LCA_parameter_ranges=open(LCA_Parameter_ranges,'r')
 LCA_parameter_ranges=LCA_parameter_ranges.readlines()
