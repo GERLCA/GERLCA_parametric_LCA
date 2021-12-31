@@ -31,6 +31,10 @@ The system of equations requires the values for characterized impacts from relev
 
 Each equation starting with "Process_" is recognized by the codes to contribute to the sum total of the life cycle impact of the studied system. No "Process_" equation should duplicate or include other "Process_" impacts in order to avoid double-counting impacts. All "Process_" equations should be scaled to the functional unit and based on the relevant indicator units for the target impact category (for example, kg CO2eq/functional unit).
 
+## Results
+
+The results of each run are saved as a text file in the same folder that the input parameter text file is saved.
+
 ## Questions
 
 Please read the comments at the top of each code and the comments within the codes for additional notes on how to proceed appropriately with the analyses.
