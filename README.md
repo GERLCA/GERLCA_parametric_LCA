@@ -35,6 +35,12 @@ Each equation starting with "Process_" is recognized by the codes to contribute 
 
 The results of each run are saved as a text file in the same folder that the input parameter text file is saved.
 
+## License
+
+Licensed under GNU General Public License v3.0: "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights." 
+
+Please cite this GitHub package when using it in a study for publication.
+
 ## Questions
 
 Please read the comments at the top of each code and the comments within the codes for additional notes on how to proceed appropriately with the analyses.
