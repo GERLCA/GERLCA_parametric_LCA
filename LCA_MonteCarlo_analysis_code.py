@@ -27,9 +27,9 @@ workingdirectory=input('Enter the file path to your working folder:')
 
 os.chdir(workingdirectory)
 
-LCA_Parameter_ranges=input('Enter the name of your parameter range file:')
+LCA_Parameter_ranges=input('Enter the name of your parameter range file (with .txt at the end):')
 MonteCarlo_runs=int(input('Enter the number of Monte Carlo runs:'))
-LCA_MonteCarlo_results=input('Enter a text file name for your Monte Carlo results:')
+LCA_MonteCarlo_results=input('Enter a text file name for your Monte Carlo results (with .txt at the end):')
 
 LCA_parameter_ranges=open(LCA_Parameter_ranges,'r')
 LCA_parameter_ranges=LCA_parameter_ranges.readlines()
