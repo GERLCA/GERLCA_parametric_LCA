@@ -69,6 +69,15 @@ Each equation starting with "Process_" is recognized by the codes to contribute 
 
 The results of each run are saved as a text file in the same folder that the input parameter text file is saved.
 
+The results of the **baseline LCA scenario analysis** will show the impact by "Process_" equation and the total impact.
+
+The results of the **sensitivity analysis** will show:
+>Parameter name, total LCA result when the parameter is changed to its minimum value, baseline LCA scenario analysis result, total LCA result when the parameter is changed to its maximum value
+
+The results of the **Monte Carlo analysis** will show a column of total LCA results (one on each line) for the number of simulations requested.
+
+The results of the **Monte Carlo analysis with parameter values by simulation** will show a header labeling each comma-delimited "column." The first column shows the total LCA result of the simulation (one simulation per line), followed by the value of each parameter used in that simulation. This can help identify the combination of parameter values that led to outliers or extreme values in order to inform either revised iterations of the LCA model or recommendations to the audience for the LCA.
+
 ## License
 
 Licensed under GNU General Public License v3.0: "Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights." 
