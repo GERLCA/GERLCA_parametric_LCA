@@ -10,13 +10,47 @@ Parametric LCA aims to maintain the relationships between different parameters a
 Input parameters are the variables that are independently set in the LCA model and that do not themselves depend on other parameter values.
 
 These codes work with an input parameter text file, saved with a .txt extension and set up with comma-delimited columns and a header. The columns should contain, in this order:
-Parameter name, Minimum value, Baseline value, Maximum value
+>Parameter name, Minimum value, Baseline value, Maximum value
 
 For Monte Carlo analysis, the input parameter text file should have an additional "column" for the probability distribution type:
-Parameter name, Minimum value, Baseline value, Maximum value, Probability distribution type
-Additionally, the values shown may need to be changed from their true minimum and maximum values, depending on the probability distribution type (please see Monte Carlo analysis code directions for more details).
+>Parameter name, Minimum value, Baseline value, Maximum value, Probability distribution type
+
+Additionally, the values shown may need to be changed from their true minimum and maximum values, depending on the probability distribution type (please see Monte Carlo analysis code directions below for more details).
 
 There should be zero empty lines in the parameter text file, including at the very end, or the code will show an error.
+
+### How to set up a line in the input parameter text file for Monte Carlo analysis, by distribution type:
+
+**Uniform distribution:** 
+>Parameter name, Minimum value, Baseline value, Maximum value,**uniform**
+
+**Normal distribution:** 
+>Parameter name, Minimum value, Baseline value, Baseline + 2 standard deviations,**normal**
+
+**Lognormal distribution:** 
+>Parameter name, Minimum value, Location, Scale,**lognormal**
+
+The lognormal distribution needs a location and scale to be defined.
+
+**Triangular distribution:**
+>Parameter name, Minimum value, Baseline value, Maximum value,**triangular**
+
+**Weibull distriution:**
+>Parameter name, Minimum value, Scale or alpha value, Shape or beta value,**Weibull**
+
+**Distribution from a weighed dataset:**
+>Parameter name, Minimum value, Baseline value, Maximum value,**weighed**
+
+This needs an external text file for the dataset of weighed probabilities for the input parameter, named exactly like the name of the parameter and saved to the same folder as the input parameter text file. There should be no spaces and no header in this text file.
+Two "columns" are separated by commas, with the possible value for the parameter first, followed by the probability of that value occurring second.
+
+**Distribution informed from raw data:**
+>Parameter name, Minimum value, Baseline value, Maximum value,**rawdata**
+
+This will only pick values from your raw dataset and nothing in between values.
+This needs an external text file for the dataset of possible values for the input parameter, named exactly like the name of the parameter and saved to the same folder as the input parameter text file. There should be no spaces and no header in this text file.
+
+It is recommended that, for Monte Carlo analysis, the impact values from characterized life cycle inventories (LCIs) be removed from the equations and that individual "rawdata" text files be created for the possible impact values of each LCI, which can be extracted from running an uncertainty analysis on a unit process LCI in SimaPro.
 
 ## LCA model (system of equations)
 
