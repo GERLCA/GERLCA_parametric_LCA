@@ -84,6 +84,10 @@ Licensed under GNU General Public License v3.0: "Permissions of this strong copy
 
 Please cite this GitHub package when using it in a study for publication.
 
+## Funding
+
+The continued development and public dissemination of these codes in 2021-2022 was supported by NSF project #2046512 (https://www.nsf.gov/awardsearch/showAward?AWD_ID=2046512&HistoricalAwards=false).
+
 ## Questions
 
 Please read the comments at the top of each code and the comments within the codes for additional notes on how to proceed appropriately with the analyses.
